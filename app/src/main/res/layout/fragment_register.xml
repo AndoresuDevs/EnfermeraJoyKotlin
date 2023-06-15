@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".ui.register.RegisterFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_nueva_cuenta"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/resaltar"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:src="@drawable/app_icon"
+        android:contentDescription="@string/descLogotipo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:startIconDrawable="@drawable/ic_name"
+        app:startIconTint="@color/resaltar">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNombreRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nombre"
+            android:inputType="textPersonName"
+            android:textColor="@color/negro"
+            android:textColorHint="#A1887F"
+            android:textSize="@dimen/form_text_size"
+            android:tooltipText="Inserte su nombre" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/resaltar"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCorreoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/correo"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/negro"
+            android:textSize="@dimen/form_text_size"
+            android:tooltipText="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/resaltar"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/resaltar"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtContraRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:textColor="@color/negro"
+            android:textSize="@dimen/form_text_size"
+            android:tooltipText="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/resaltar"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/resaltar"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtContra2Registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirmar_contrasena"
+            android:inputType="textPassword"
+            android:textColor="@color/negro"
+            android:textSize="@dimen/form_text_size"
+            android:tooltipText="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/registrar"
+        android:textSize="@dimen/form_text_size"
+        app:icon="@drawable/ic_log_in" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancelarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:text="@string/cancelar_registro"
+        android:textSize="@dimen/form_text_size"
+        app:icon="@drawable/ic_cancel" />
+
+
+
+
+</LinearLayout>

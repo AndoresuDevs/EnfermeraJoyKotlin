@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.treatments.TreatmentFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+    <TextView
+        android:id="@+id/TituloTratamiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:text="@string/ver_tratamiento"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/resaltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TituloTratamiento">
+
+        <LinearLayout
+            android:id="@+id/formularioTratamiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_personal"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_calendar_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtFechaTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fecha"
+                    android:inputType="date"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Fecha DD/MM/AAAA" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_name"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNombreTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    app:startIconDrawable="@drawable/ic_weigth"
+                    app:startIconTint="@color/resaltar">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPesoTrat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/peso"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Peso en Kg" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    app:startIconDrawable="@drawable/ic_heigth"
+                    app:startIconTint="@color/resaltar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEstaturaTrat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/estatura"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Estatura en Metros" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    app:startIconDrawable="@drawable/ic_age"
+                    app:startIconTint="@color/resaltar">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEdadTrat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/edad"
+                        android:inputType="number"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Edad Actual" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_gender"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtSexoTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/sexo"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Hombre, Mujer, Etc." />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elegantTextHeight="true"
+                android:text="@string/info_tratamiento"
+                android:textSize="24sp"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="15dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_doctor_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtMedicoTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/medico"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Medico que realizo el tratamiento" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_hospital_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtHospitalTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/unidad_medica"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Centro medico donde se realizó la consulta" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_diagnostic_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDiagnosticoTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/diagnostico"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Diagnostico de la Enfermedad" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_treatment_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDetallesTrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/detalles"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Medicamentos, Horarios, Cantidades, Etc" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/resaltar"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCancelTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/casual"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabSaveTrat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/neutral"
+        android:clickable="true"
+
+        android:contentDescription="@string/fab_description"
+        android:focusable="true"
+        android:tag="fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_open_close" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_edit_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabTrat"
+        app:layout_constraintEnd_toEndOf="@+id/fabTrat"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeleteTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_delete_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabEditTrat"
+        app:layout_constraintEnd_toEndOf="@+id/fabEditTrat"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShareTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabDeleteTrat"
+        app:layout_constraintEnd_toEndOf="@+id/fabDeleteTrat"
+        app:srcCompat="@drawable/ic_share" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSpeakerTrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabShareTrat"
+        app:layout_constraintEnd_toEndOf="@+id/fabShareTrat"
+        app:srcCompat="@drawable/ic_speaker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

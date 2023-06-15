@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.doctors.DoctorsFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TituloDoctor">
+
+        <LinearLayout
+            android:id="@+id/formularioDoctores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:startIconDrawable="@drawable/ic_doctor_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nombre_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_medical_specialty_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/especialidad_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/especialidad"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:startIconDrawable="@drawable/ic_hospital_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hospital_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/hospital"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:startIconDrawable="@drawable/ic_phone_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/telefono_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/telefono"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correo_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/correo"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/TituloDoctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elegantTextHeight="true"
+        android:text="@string/ver_doctor"
+        android:textAllCaps="false"
+        android:textColor="@color/resaltar"
+        android:textSize="24sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/resaltar"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCancelDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/casual"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabSaveDoc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/neutral"
+        android:clickable="true"
+        android:contentDescription="@string/fab_description"
+        android:focusable="true"
+        android:tag="tag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_open_close" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_edit_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabDoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabDoc"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeleteDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_delete_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabEditDoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabEditDoc"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShareDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabDeleteDoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabDeleteDoc"
+        app:srcCompat="@drawable/ic_share" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSpeakerDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabShareDoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabShareDoc"
+        app:srcCompat="@drawable/ic_speaker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

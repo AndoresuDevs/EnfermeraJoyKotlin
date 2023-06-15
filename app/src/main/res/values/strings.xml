@@ -1,0 +1,67 @@
+<resources>
+    //LOGIN
+    <string name="app_name">Enfermera Joy</string>
+    <string name="descLogotipo">Logotipo de la aplicación enfermera joy</string>
+    <string name="contrasena">Contraseña:</string>
+    <string name="confirmar_contrasena">Confirmar Contraseña:</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="menu">Menú</string>
+    <string name="ver_tratamiento">Detalles del Tratamiento</string>
+    <string name="ver_doctor">Detalles del Doctor</string>
+    <string name="ver_hospital">Detalles del Hospital</string>
+    <string name="info_personal">Información Personal</string>
+    <string name="fecha">Fecha:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="apellidos">Apellidos:</string>
+    <string name="peso">Peso:</string>
+    <string name="estatura">Estatura:</string>
+    <string name="edad">Edad:</string>
+    <string name="sexo">Sexo:</string>
+    <string name="info_tratamiento">Información del Tratamiento</string>
+    <string name="medico">Médico:</string>
+    <string name="unidad_medica">Unidad Medica:</string>
+    <string name="diagnostico">Diagnstico:</string>
+    <string name="detalles">Detalles:</string>
+    <string name="fab_description">Botón para mostrar y ocultar el menú</string>
+    <string name="fab_edit_description">Botón para editar</string>
+    <string name="fab_delete_description">Botón para eliminar</string>
+    <string name="hospitales">Hospitales</string>
+    <string name="doctores">Doctores</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+
+    <string name="especialidad">Especialidad</string>
+    <string name="planta">Planta</string>
+    <string name="cedula_profecional">Cedula Profecional</string>
+    <string name="telefono">Teléfono:</string>
+    <string name="correo">Correo</string>
+    <string name="fab_share_description">Botón para compartir</string>
+    <string name="hospital">Hospital</string>
+    <string name="direccion">Dirección</string>
+    <string name="fab_list">Botón para agregar un nuevo registro</string>
+
+    //MENU
+    <string name="mi_perfil">Mi Perfíl</string>
+    <string name="mis_recetas">Mis Recetas</string>
+    <string name="mis_doctores">Mis Doctores</string>
+    <string name="mis_hospitales">Mis Hospitales</string>
+    <string name="escaner">Escaner</string>
+    <string name="informacion_medica">Información Médica</string>
+
+    //PERFIL
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento:</string>
+    <string name="genero">Género:</string>
+    <string name="domicilio">Domicilio:</string>
+    <string name="alergias">Alergias:</string>
+    <string name="grupo_sanguineo">Grupo Sanguineo:</string>
+    <string name="unidad_medica_familiar">Unidad Medica Familiar:</string>
+    <string name="numero_de_seguro_social">Nímero de Seguro Social:</string>
+    <string name="contactos_de_emergencia">Contactos de Emergencia</string>
+    <string name="donante_de_organos">Donante de Organos</string>
+    <string name="crear_nueva_cuenta">Crear Nueva Cuenta</string>
+    <string name="cancelar_registro">Cancelar Registro</string>
+    <string name="registrar">Registrar</string>
+    <string name="recuperar_contrasena">Recuperar Contraseña</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="recuperar">Recuperar</string>
+
+</resources>

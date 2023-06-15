@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.hospitals.HospitalsFragment"
+    android:padding="10dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+    <TextView
+        android:id="@+id/TituloHospital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elegantTextHeight="true"
+        android:text="@string/ver_hospital"
+        android:textAllCaps="false"
+        android:textColor="@color/resaltar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TituloHospital">
+
+        <LinearLayout
+            android:id="@+id/formularioHospitales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_hospital_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nombreHosp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_medical_specialty_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/especialidad_hosp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/especialidad"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:startIconDrawable="@drawable/ic_location_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/direccionHosp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/direccion"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_phone_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/telefonoHosp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/telefono"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correoHosp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/correo"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Nombre(s)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/resaltar"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCancelHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/casual"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabSaveHosp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/neutral"
+        android:clickable="true"
+        android:contentDescription="@string/fab_description"
+        android:focusable="true"
+        android:tag="fab"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_open_close" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_edit_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabHosp"
+        app:layout_constraintEnd_toEndOf="@+id/fabHosp"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeleteHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_delete_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabEditHosp"
+        app:layout_constraintEnd_toEndOf="@+id/fabEditHosp"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShareHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabDeleteHosp"
+        app:layout_constraintEnd_toEndOf="@+id/fabDeleteHosp"
+        app:srcCompat="@drawable/ic_share" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSpeakerHosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabShareHosp"
+        app:layout_constraintEnd_toEndOf="@+id/fabShareHosp"
+        app:srcCompat="@drawable/ic_speaker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

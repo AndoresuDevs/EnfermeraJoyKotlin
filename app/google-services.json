@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "444653575137",
+    "project_id": "enfermera-joy-nfc",
+    "storage_bucket": "enfermera-joy-nfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444653575137:android:943675ca3c57ba1efb10a0",
+        "android_client_info": {
+          "package_name": "com.andoresudevs.enfermerajoykotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444653575137-l5mmndmm025v4mnlktm4icgv5kd3amb2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andoresudevs.enfermerajoykotlin",
+            "certificate_hash": "bb92de34552a5732c7bd01c584a7430b231dcc5c"
+          }
+        },
+        {
+          "client_id": "444653575137-mc26771vsm7obqve65rnqpmkdfsrp1e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxam9dYtSjPaw95kQqZlGmkrg8yvXFI1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444653575137-mc26771vsm7obqve65rnqpmkdfsrp1e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

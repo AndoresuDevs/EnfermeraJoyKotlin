@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/formularioPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/TituloPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:text="@string/mi_perfil"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/resaltar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_personal"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_name"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNombreP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Inserte su nombre" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_age"
+                    app:startIconTint="@color/resaltar">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFechaNacimientoP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/fecha_de_nacimiento"
+                        android:inputType="number"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su edad" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_heigth"
+                    app:startIconTint="@color/resaltar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEstaturaP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/estatura"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su estatura" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_gender"
+                    app:startIconTint="@color/resaltar">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSexoP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/genero"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su sexo" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_weigth"
+                    app:startIconTint="@color/resaltar">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPesoP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/peso"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su peso" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_home_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDomicilioP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+
+                    android:hint="@string/domicilio"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Inserte su domicilio" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_phone_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtTelefonoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/telefono"
+                    android:inputType="number|phone"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Inserte su numero de telefono" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elegantTextHeight="true"
+                android:text="@string/informacion_medica"
+                android:textSize="24sp"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="15dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_nss_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNssP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/numero_de_seguro_social"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="En caso de tener alergias puede enlistarlas aquí" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_allergy_small"
+                app:startIconTint="@color/resaltar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAlergiasP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/alergias"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="En caso de tener alergias puede enlistarlas aquí" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:startIconDrawable="@drawable/ic_donate"
+                    android:layout_weight="1"
+                    app:startIconTint="@color/resaltar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDonanteP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/donante_de_organos"
+                        android:inputType="textCapCharacters"
+                        android:textColorHint="#A1887F"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su tipo de sangre" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_blood_small"
+                    app:startIconTint="@color/resaltar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSangreP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:elegantTextHeight="true"
+                        android:hint="@string/grupo_sanguineo"
+                        android:inputType="textCapCharacters"
+                        android:textSize="@dimen/form_text_size"
+                        android:tooltipText="Inserte su tipo de sangre" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_hospital_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUmfP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/unidad_medica_familiar"
+                    android:inputType="text"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="Inserte su unidad medica asignada o un lugar a donde acudir en caso de emergencia" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:startIconDrawable="@drawable/ic_treatment_small"
+                app:startIconTint="@color/resaltar">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDetallesP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:hint="@string/detalles"
+                    android:textSize="@dimen/form_text_size"
+                    android:tooltipText="En este espacio puede describir una situacion especial o algun detalle" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elegantTextHeight="true"
+                android:text="@string/contactos_de_emergencia"
+                android:textSize="24sp"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="15dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/adapter_contact"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSavePerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/resaltar"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCancelPerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/casual"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:tag="fabCreate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabSavePerf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/neutral"
+        android:clickable="true"
+        android:contentDescription="@string/fab_description"
+        android:focusable="true"
+        android:tag="fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_open_close" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditPerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_edit_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabPerf"
+        app:layout_constraintEnd_toEndOf="@+id/fabPerf"
+        app:srcCompat="@drawable/ic_edit" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSharePerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/fabEditPerf"
+        app:layout_constraintEnd_toEndOf="@+id/fabEditPerf"
+        app:srcCompat="@drawable/ic_share" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSpeakerPerf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_share_description"
+        android:focusable="true"
+        android:tag="fabCrud"
+        android:tint="@color/casual"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabSharePerf"
+        app:layout_constraintEnd_toEndOf="@+id/fabSharePerf"
+        app:srcCompat="@drawable/ic_speaker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

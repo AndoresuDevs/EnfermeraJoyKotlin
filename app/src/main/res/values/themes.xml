@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EnfermeraJoyKotlin" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/neutral</item>
+        <item name="colorAccent">@color/resaltar</item>
+        <item name="colorOnBackground">@drawable/gradient_background</item>
+    </style>
+
+    <style name="Theme.EnfermeraJoyKotlin" parent="Base.Theme.EnfermeraJoyKotlin" />
+</resources>

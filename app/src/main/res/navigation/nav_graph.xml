@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.menu.MenuFragment"
+        android:label="@string/menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menu_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_menu_to_scanner"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_menu_to_list"
+            app:destination="@id/listFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_nfcWriterActivity"
+            app:destination="@id/nfcWriterActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.scanner.ScannerFragment"
+        android:label="fragment_scanner"
+        tools:layout="@layout/fragment_scanner" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list">
+        <argument android:name="tipoDeObjeto"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_list_to_treatment"
+            app:destination="@id/treatmentFragment" />
+        <action
+            android:id="@+id/action_list_to_doctors"
+            app:destination="@id/doctorsFragment" />
+        <action
+            android:id="@+id/action_list_to_hospitals"
+            app:destination="@id/hospitalsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/treatmentFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.treatments.TreatmentFragment"
+        android:label="fragment_treatment"
+        tools:layout="@layout/fragment_treatment" >
+        <argument
+            android:name="modo"
+            app:argType="string"
+            android:defaultValue="Create"/>
+        <argument
+            android:name="jsonObject"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_treatmentFragment_to_nfcWriterActivity"
+            app:destination="@id/nfcWriterActivity" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorsFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.doctors.DoctorsFragment"
+        android:label="fragment_doctors"
+        tools:layout="@layout/fragment_doctors" >
+        <argument
+            android:name="modo"
+            app:argType="string"
+            android:defaultValue="Create"/>
+        <argument
+            android:name="jsonObject"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_doctorsFragment_to_nfcWriterActivity"
+            app:destination="@id/nfcWriterActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hospitalsFragment"
+        android:name="com.andoresudevs.enfermerajoykotlin.ui.hospitals.HospitalsFragment"
+        android:label="fragment_hospitals"
+        tools:layout="@layout/fragment_hospitals">
+        <argument
+            android:name="modo"
+            app:argType="string"
+            android:defaultValue="Create"/>
+        <argument
+            android:name="jsonObject"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_hospitalsFragment_to_nfcWriterActivity"
+            app:destination="@id/nfcWriterActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/nfcWriterActivity"
+        android:name="com.andoresudevs.enfermerajoykotlin.NfcWriterActivity"
+        android:label="activity_nfc_writer"
+        tools:layout="@layout/activity_nfc_writer" />
+
+</navigation>
